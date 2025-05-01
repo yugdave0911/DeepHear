@@ -7,3 +7,6 @@ DeepHear is a comprehensive Python library designed to streamline every step of 
 *  Perform PHQ-8 classification on individual chunks using convolutional or attention-based classification heads; label maps and collate functions assemble variable-length feature sequences into padded batches and map raw PHQ-8 scores to discrete severity categories automatically.
 
 With a clear, modular design—separating configuration, data loading, modeling, training routines and utilities—DeepHear empowers you to swap in new models, add custom loss functions, or integrate alternative preprocessing steps without rewriting boilerplate. Whether you’re benchmarking contrastive objectives or deploying an end-to-end depression screening system, DeepHear handles the heavy lifting and keeps your codebase clean and reproducible.
+You can download already fine tuned models from these paths:
+Wav2Vec fine tuned: https://huggingface.co/yugdave/fine_tuned_wav2vec_daic-woz
+Fine tuned RoBERTa : https://huggingface.co/yugdave/fine_tuned_roberta_daic-woz
