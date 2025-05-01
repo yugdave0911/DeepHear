@@ -1,1 +1,9 @@
 # DeepHear
+DeepHear is a comprehensive Python library designed to streamline every step of a multimodal depression‐detection pipeline, from raw data to predictive models. At its core, DeepHear lets you:
+*  Preprocess participant sessions by isolating and concatenating only the “Participant” turns in your audio and transcript files, then chopping them into fixed-length chunks with aligned CSVs for downstream processing.
+*  Build contrastive datasets that pair audio embeddings (via Wav2Vec2) with text embeddings (via BERT/RoBERTa), so you can learn a shared representation space using a lightweight projection head and an NT-Xent loss.
+*  Fine-tune audio and text backbones independently for direct classification or embedding extraction—thanks to ready‐to‐use wrapper classes for Wav2Vec2Model and BertModel that output either raw features or class logits.
+*  Train projection heads through our AudioTrainer and TextTrainer loops, which handle batching, optimization, checkpointing, and evaluation, letting you focus on experimenting with different architectures and hyperparameters.
+*  Perform PHQ-8 classification on individual chunks using convolutional or attention-based classification heads; label maps and collate functions assemble variable-length feature sequences into padded batches and map raw PHQ-8 scores to discrete severity categories automatically.
+
+With a clear, modular design—separating configuration, data loading, modeling, training routines and utilities—DeepHear empowers you to swap in new models, add custom loss functions, or integrate alternative preprocessing steps without rewriting boilerplate. Whether you’re benchmarking contrastive objectives or deploying an end-to-end depression screening system, DeepHear handles the heavy lifting and keeps your codebase clean and reproducible.
