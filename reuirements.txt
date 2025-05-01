@@ -1,0 +1,9 @@
+torch>=1.12
+transformers>=4.20
+datasets
+numpy
+pandas
+tqdm
+torchaudio
+librosa
+pydub
